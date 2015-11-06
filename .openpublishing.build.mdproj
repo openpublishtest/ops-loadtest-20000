@@ -1,0 +1,16 @@
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <RepositoryRoot Condition="'$(RepositoryRoot)' == '' ">$(MSBuildThisFileDirectory)</RepositoryRoot>
+    <OutputFolder Condition="'$(OutputFolder)' == '' ">$(MSBuildThisFileDirectory)_site</OutputFolder>
+    <LogOutputFolder Condition="'$(LogOutputFolder)' == ''">$(MSBuildThisFileDirectory)\log\</LogOutputFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SourceFiles Include="$(RepositoryRoot)\largesize\*.*" />
+  </ItemGroup>
+
+  <!-- Fake Build Target -->
+  <Target Name="Build">
+    <Copy SourceFiles="@(SourceFiles)" DestinationFolder="$(OutputFolder)\largesize" />
+  </Target>
+</Project>

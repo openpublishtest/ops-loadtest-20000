@@ -1,0 +1,18 @@
+{
+    "build_entry_point": "",
+    "docsets_to_publish": [
+        {
+            "docset_name": "loadtest-largesize",
+            "build_output_subfolder": "largesize",
+            "locale": "en-us",
+            "version": 0,
+            "open_to_public_contributors": "false",
+            "type_mapping": { 
+                "Conceptual": "Content"
+            } 
+        }
+    ],
+    "notification_subscribers": [
+        "fenxu@microsoft.com", "yih@microsoft"
+    ]
+}
